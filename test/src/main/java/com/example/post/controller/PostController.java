@@ -22,6 +22,7 @@ public class PostController {
         this.postRepository = postRepository;
     }
 
+    // CRUD를 컨트롤하는 아랫 부분이 DI 내용
     // 생성
     @PostMapping
     public Post createPost(@RequestBody Post post) {
@@ -48,6 +49,7 @@ public class PostController {
         return postService.save(post);
     }
 
+    // 삭제
     @DeleteMapping("/{postId}")
     public void deletePost(@PathVariable Long postId){
         postService.deleteById(postId);
