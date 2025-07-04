@@ -9,7 +9,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/members")
 
-
 //localhost:8080/members/B
 public class MemberController {
     private final MemberService service;
@@ -23,7 +22,7 @@ public class MemberController {
         return service.save(member);
     }
 
-    @GetMapping("B")
+    @GetMapping("/B")
     public List<Member> getAll(){
         return service.findAll();
     }

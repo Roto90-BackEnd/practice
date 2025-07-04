@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+
 public class MemberService {
     private final MemberRepository repo;
 
@@ -21,6 +22,4 @@ public class MemberService {
     public List<Member> findAll(){
         return repo.findAll();
     }
-
-
 }
